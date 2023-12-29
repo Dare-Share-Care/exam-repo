@@ -35,6 +35,23 @@ services:
     networks:
       - kafka
 
+# Auth Service
+  mtogo.auth:
+    container_name: mtogo-auth
+    image: mtogo.auth
+    build:
+      context: ./services/MTOGOAuth
+      dockerfile: src/Auth.Web/Dockerfile
+    ports:
+      - "8083:80"
+    networks:
+      - kafka
+    depends_on:
+    - mssql-users
+    expose:
+      - "1433"
+      - "1435"
+
 # Order Service
   mtogo.orders-web: # Web API Server
     container_name: mtogo-orders-web
@@ -99,6 +116,22 @@ services:
 
 # Databases
 
+# User DB
+  mssql-users:
+    image: mcr.microsoft.com/azure-sql-edge
+    container_name: mssql-users
+    restart: unless-stopped
+    environment:
+      ACCEPT_EULA: Y
+      MSSQL_SA_PASSWORD: thisIsSuperStrong1234
+      SA_PASSWORD: thisIsSuperStrong1234
+    ports:
+      - "1435:1433"
+    volumes:
+      - data-users:/var/opt/mssql
+    networks:
+      - kafka
+
 # Orders DB
   mssql-orders:
     image: mcr.microsoft.com/azure-sql-edge
@@ -131,23 +164,6 @@ services:
     networks:
       - kafka
 
-# User DB
-  mssql-users:
-    image: mcr.microsoft.com/azure-sql-edge
-    container_name: mssql-users
-    restart: unless-stopped
-    environment:
-      ACCEPT_EULA: Y
-      MSSQL_SA_PASSWORD: thisIsSuperStrong1234
-      SA_PASSWORD: thisIsSuperStrong1234
-    ports:
-      - "1435:1433"
-    volumes:
-      - data:/var/opt/mssql
-    networks:
-      - kafka
-
-
 #Configuration
 networks:
   kafka:
@@ -156,3 +172,4 @@ networks:
 volumes:
   data:
   data-orders:
+  data-users:
