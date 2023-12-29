@@ -35,23 +35,6 @@ services:
     networks:
       - kafka
 
-# Auth Service
-  mtogo.auth:
-    container_name: mtogo-auth
-    image: mtogo.auth
-    build:
-      context: ./services/MTOGOAuth
-      dockerfile: src/Auth.Web/Dockerfile
-    ports:
-      - "8083:80"
-    networks:
-      - kafka
-    depends_on:
-    - mssql-users
-    expose:
-      - "1433"
-      - "1435"
-
 # Order Service
   mtogo.orders-web: # Web API Server
     container_name: mtogo-orders-web
@@ -94,8 +77,6 @@ services:
       - "8081:80"
     networks:
       - kafka
-    expose:
-      - "1433"
     depends_on:
       - kafka
       - mssql-restaurant
@@ -114,23 +95,35 @@ services:
       - kafka
       - mssql-restaurant
 
-# Databases
-
-# User DB
-  mssql-users:
-    image: mcr.microsoft.com/azure-sql-edge
-    container_name: mssql-users
-    restart: unless-stopped
-    environment:
-      ACCEPT_EULA: Y
-      MSSQL_SA_PASSWORD: thisIsSuperStrong1234
-      SA_PASSWORD: thisIsSuperStrong1234
+  
+  # Auth Service
+  mtogo.auth:
+    container_name: mtogo-auth
+    image: mtogo.auth
+    build:
+      context: ./services/MTOGOAuth
+      dockerfile: src/Auth.Web/Dockerfile
     ports:
-      - "1435:1433"
-    volumes:
-      - data-users:/var/opt/mssql
+      - "8083:80"
     networks:
       - kafka
+    depends_on:
+    - mssql-users
+
+# Email Service
+  mtogo.emails:
+    container_name: mtogo-emails
+    image: mtogo.emails
+    build:
+      context: ./services/MTOGOEmails
+      dockerfile: src/EmailSender/Dockerfile
+    ports:
+      - "8087:80"
+    networks:
+      - kafka
+
+
+# Databases
 
 # Orders DB
   mssql-orders:
@@ -164,12 +157,28 @@ services:
     networks:
       - kafka
 
+  # User DB
+  mssql-users:
+    image: mcr.microsoft.com/azure-sql-edge
+    container_name: mssql-users
+    restart: unless-stopped
+    environment:
+      ACCEPT_EULA: Y
+      MSSQL_SA_PASSWORD: thisIsSuperStrong1234
+      SA_PASSWORD: thisIsSuperStrong1234
+    ports:
+      - "1435:1433"
+    volumes:
+      - data-users:/var/opt/mssql
+    networks:
+      - kafka
+
 #Configuration
 networks:
   kafka:
     name: kafka
 
 volumes:
-  data:
-  data-orders:
-  data-users:
+ data:
+ data-orders:
+ data-users:
