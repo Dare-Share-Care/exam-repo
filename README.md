@@ -6,9 +6,7 @@
 - **Julius Krüger Madsen**: cph-jm352@cphbusiness.dk
 
 ## Setup ##
-### 1.  Clone this project
-
-### 3.  ```docker-compose -f docker-compose.yml up -d --build```
+### ```docker-compose -f docker-compose.yml up -d --build```
 
 [API Gateway](https://github.com/Dare-Share-Care/exam-gateway)  
 
