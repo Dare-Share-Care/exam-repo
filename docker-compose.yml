@@ -1,0 +1,158 @@
+version: '3.8'
+services:
+  zookeeper:
+    image: wurstmeister/zookeeper
+    container_name: zookeeper
+    ports:
+      - "2181:2181"
+    networks:
+      - kafka
+
+  kafka:
+    image: wurstmeister/kafka
+    container_name: kafka
+    ports:
+      - "9092:9092" # Port exposed to the host
+      - "9093:9093" # Additional port for internal use
+    environment:
+      KAFKA_ADVERTISED_LISTENERS: INSIDE://kafka:9093,OUTSIDE://localhost:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: INSIDE:PLAINTEXT,OUTSIDE:PLAINTEXT
+      KAFKA_LISTENERS: INSIDE://0.0.0.0:9093,OUTSIDE://0.0.0.0:9092
+      KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+    networks:
+      - kafka
+
+# Gateway
+  mtogo.gateway:
+    container_name: mtogo-gateway
+    image: mtogo.gateway
+    build:
+      context: ./services/MTOGOGateway
+      dockerfile: src/OcelotApiGateway/Dockerfile
+    ports:
+      - "8080:80"
+    networks:
+      - kafka
+
+# Order Service
+  mtogo.orders-web: # Web API Server
+    container_name: mtogo-orders-web
+    image: mtogo.orders.web
+    build:
+      context: ./services/MTOGOOrders
+      dockerfile: src/Orders.Web/Dockerfile
+    ports:
+      - "8085:80"
+    networks:
+      - kafka
+    expose:
+      - "8000"
+    depends_on:
+      - kafka
+      - mssql-orders
+
+  mtogo.orders.grpc: # GRPC Server
+    container_name: mtogo-orders-grpc
+    image: mtogo.orders.grpc
+    build:
+      context: ./services/MTOGOOrders
+      dockerfile: src/Orders.Grpc/Dockerfile
+    ports:
+      - "8001:8000"
+    networks:
+      - kafka
+    depends_on:
+      - kafka
+      - mssql-orders
+
+# Restaurant Service
+  mtogo.restaurant-web: # Web API Server
+    container_name: mtogo-restaurant-web
+    image: mtogo.restaurant.web
+    build:
+      context: ./services/MTOGORestaurant
+      dockerfile: src/Restaurant.Web/Dockerfile
+    ports:
+      - "8081:80"
+    networks:
+      - kafka
+    expose:
+      - "1433"
+    depends_on:
+      - kafka
+      - mssql-restaurant
+
+  mtogo.restaurant.grpc: # GRPC Server
+    container_name: mtogo-restaurant-grpc
+    image: mtogo.restaurant.grpc
+    build:
+      context: ./services/MTOGORestaurant
+      dockerfile: src/Restaurant.Grpc/Dockerfile
+    ports:
+      - "8000:8000"
+    networks:
+      - kafka
+    depends_on:
+      - kafka
+      - mssql-restaurant
+
+# Databases
+
+# Orders DB
+  mssql-orders:
+    image: mcr.microsoft.com/azure-sql-edge
+    container_name: mssql-orders
+    restart: unless-stopped
+    environment:
+      ACCEPT_EULA: Y
+      MSSQL_SA_PASSWORD: thisIsSuperStrong1234
+      SA_PASSWORD: thisIsSuperStrong1234
+    ports:
+      - "1434:1433"
+    volumes:
+      - data-orders:/var/opt/mssql
+    networks:
+      - kafka
+
+# Restaurant DB
+  mssql-restaurant:
+    image: mcr.microsoft.com/azure-sql-edge
+    container_name: mssql-restaurant
+    restart: unless-stopped
+    environment:
+      ACCEPT_EULA: Y
+      MSSQL_SA_PASSWORD: thisIsSuperStrong1234
+      SA_PASSWORD: thisIsSuperStrong1234
+    ports:
+      - "1433:1433"
+    volumes:
+      - data:/var/opt/mssql
+    networks:
+      - kafka
+
+# User DB
+  mssql-users:
+    image: mcr.microsoft.com/azure-sql-edge
+    container_name: mssql-users
+    restart: unless-stopped
+    environment:
+      ACCEPT_EULA: Y
+      MSSQL_SA_PASSWORD: thisIsSuperStrong1234
+      SA_PASSWORD: thisIsSuperStrong1234
+    ports:
+      - "1435:1433"
+    volumes:
+      - data:/var/opt/mssql
+    networks:
+      - kafka
+
+
+#Configuration
+networks:
+  kafka:
+    name: kafka
+
+volumes:
+  data:
+  data-orders:
