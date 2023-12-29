@@ -8,11 +8,7 @@
 ## Setup ##
 ### 1.  Clone this project
 
-### 2.  In the root folder of the project, create a folder called services
-
-### 2.  Clone all microservice projects into the services folder 
-
-### 3.  Run ```docker-compose -f docker-compose.yml up -d --build``` from the root directory
+### 3.  ```docker-compose -f docker-compose.yml up -d --build```
 
 [API Gateway](https://github.com/Dare-Share-Care/exam-gateway)  
 
