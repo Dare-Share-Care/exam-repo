@@ -95,7 +95,6 @@ services:
       - kafka
       - mssql-restaurant
 
-  
   # Auth Service
   mtogo.auth:
     container_name: mtogo-auth
@@ -121,6 +120,21 @@ services:
       - "8087:80"
     networks:
       - kafka
+
+# Feedback Service
+  mtogo.feedback:
+    container_name: mtogo-feedback
+    image: mtogo.feedback
+    build:
+      context: ./services/MTOGOFeedback
+      dockerfile: src/Feedback.Web/Dockerfile
+    ports:
+      - "8091:80"
+    networks:
+      - kafka
+    expose:
+      - "8000"
+      - "8001"
 
 
 # Databases
