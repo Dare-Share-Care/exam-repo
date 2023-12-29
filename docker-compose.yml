@@ -135,6 +135,8 @@ services:
     expose:
       - "8000"
       - "8001"
+    depends_on:
+      - mssql-reviews
 
 
 # Databases
@@ -187,6 +189,22 @@ services:
     networks:
       - kafka
 
+  # User DB
+  mssql-reviews:
+      image: mcr.microsoft.com/azure-sql-edge
+      container_name: mssql-reviews
+      restart: unless-stopped
+      environment:
+        ACCEPT_EULA: Y
+        MSSQL_SA_PASSWORD: thisIsSuperStrong1234
+        SA_PASSWORD: thisIsSuperStrong1234
+      ports:
+        - "1436:1433"
+      volumes:
+        - data-reviews:/var/opt/mssql
+      networks:
+        - kafka
+
 #Configuration
 networks:
   kafka:
@@ -196,3 +214,4 @@ volumes:
  data:
  data-orders:
  data-users:
+ data-reviews:
