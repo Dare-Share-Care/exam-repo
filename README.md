@@ -5,6 +5,9 @@
 
 - **Julius Krüger Madsen**: cph-jm352@cphbusiness.dk
 
+## Architecture ##
+![Architecture Diagram](diagrams/architecture.png)
+
 ## Setup ##
 ### ```docker-compose -f docker-compose.yml up -d --build```
 
