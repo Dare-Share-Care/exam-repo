@@ -138,6 +138,22 @@ services:
     depends_on:
       - mssql-reviews
 
+# Delivery Service
+  mtogo.delivery:
+    container_name: mtogo-delivery
+    image: mtogo.delivery
+    build:
+      context: ./services/MTOGODelivery
+      dockerfile: src/Courier.Web/Dockerfile
+    ports:
+      - "8084:80"
+    networks:
+      - kafka
+    expose:
+      - "8000"
+      - "8001"
+    depends_on:
+      - mssql-deliveries
 
 # Databases
 
@@ -189,7 +205,7 @@ services:
     networks:
       - kafka
 
-  # User DB
+  # Review DB
   mssql-reviews:
       image: mcr.microsoft.com/azure-sql-edge
       container_name: mssql-reviews
@@ -205,7 +221,23 @@ services:
       networks:
         - kafka
 
-#Configuration
+  # Delivery DB
+  mssql-deliveries:
+      image: mcr.microsoft.com/azure-sql-edge
+      container_name: mssql-deliveries
+      restart: unless-stopped
+      environment:
+        ACCEPT_EULA: Y
+        MSSQL_SA_PASSWORD: thisIsSuperStrong1234
+        SA_PASSWORD: thisIsSuperStrong1234
+      ports:
+        - "1437:1433"
+      volumes:
+        - data-deliveries:/var/opt/mssql
+      networks:
+        - kafka
+
+# Configuration
 networks:
   kafka:
     name: kafka
@@ -215,3 +247,4 @@ volumes:
  data-orders:
  data-users:
  data-reviews:
+ data-deliveries:
