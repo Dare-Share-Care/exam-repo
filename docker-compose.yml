@@ -1,5 +1,7 @@
 version: '3.8'
 services:
+
+# Kakfa and Zookeeper
   zookeeper:
     image: wurstmeister/zookeeper
     container_name: zookeeper
@@ -20,6 +22,36 @@ services:
       KAFKA_LISTENERS: INSIDE://0.0.0.0:9093,OUTSIDE://0.0.0.0:9092
       KAFKA_INTER_BROKER_LISTENER_NAME: INSIDE
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+    networks:
+      - kafka
+
+# Prometheus and Grafana for performance monitoring
+  prometheus:
+    image: prom/prometheus:latest
+    volumes:
+      - ./prometheus/:/etc/prometheus/
+      - prometheus_data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/usr/share/prometheus/console_libraries'
+      - '--web.console.templates=/usr/share/prometheus/consoles'
+    ports:
+      - 9090:9090
+    networks:
+      - kafka
+    restart: always
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana_data:/var/lib/grafana
     networks:
       - kafka
 
@@ -164,7 +196,7 @@ services:
       context: ./services/MTOGOClient
       dockerfile: Dockerfile
     ports:
-      - "3000:3000"
+      - "4000:3000"
     networks:
       - mtogo-frontend
 
@@ -263,3 +295,6 @@ volumes:
  data-users:
  data-reviews:
  data-deliveries:
+ grafana_data:
+  external: false
+ prometheus_data: {}
