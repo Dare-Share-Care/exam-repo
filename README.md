@@ -8,6 +8,13 @@
 ## Architecture ##
 ![Architecture Diagram](diagrams/architecture.png)
 
+
+![BPMN Diagram](diagrams/create-order-bpmn.png)
+
+![Legacy Domain Model Diagram](diagrams/legacy-domain.png)
+
+![Usecase Diagram](diagrams/usecase.png)
+
 ## Setup ##
 ### ```docker-compose -f docker-compose.yml up -d --build```
 
