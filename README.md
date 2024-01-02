@@ -52,7 +52,7 @@ handles email sending through event-driven messages sent from various microservi
 We did not start development on the notification service - the idea was to send notifications to various clients and their corresponding users using web sockets.
 
 ## Architecture
-The MTOGO Microservice architecture
+The MTOGO Microservice Architecture (as of current development)
 ![Architecture Diagram](diagrams/architecture.png)
 
 ## BPMN Diagram
