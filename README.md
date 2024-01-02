@@ -107,11 +107,13 @@ The MTOGO Microservice Architecture (as of current development)
 ![Usecase Diagram](diagrams/usecase.png)
 
 ## Docker
-These are the docker containers on the MTOGO platform.
+These are the docker containers on the MTOGO platform. As a container orchestrator, we use docker compose. Our `docker-compose.yml` file can be found [here](docker-compose.yml):
+
 ![Docker One](images/docker1.jpg)
 
 ![Docker Two](images/docker2.png)
 
 ![Docker Three](images/docker3.png)
+
 
 
