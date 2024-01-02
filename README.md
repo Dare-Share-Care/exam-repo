@@ -14,9 +14,10 @@
 Furthermore to use another existing "legacy system" we decided to take use of an external geolocation API to convert the customers address from the created order to latitude and longitude. We did this to make use of another external API on our client-side providing a map of each active delivery as courier has claimed providing real-time navigation on the MTOGO platform for our couriers.
 
 The APIs in question:
-[LocationIQ (Geolocation API)](https://locationiq.com/)
 
-[React Leaflet (React component for integrated maps)](https://react-leaflet.js.org/)
+1. [LocationIQ (Geolocation API)](https://locationiq.com/)
+
+2. [React Leaflet (React component for integrated maps)](https://react-leaflet.js.org/)
 
 ### Monolthic Legacy System
 [Monolithic Legacy System](https://github.com/Dare-Share-Care/exam-orders)
