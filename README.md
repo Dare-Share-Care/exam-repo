@@ -22,6 +22,8 @@ The MTOGO Microservice architecture
 ![Usecase Diagram](diagrams/usecase.png)
 
 ## Setup
+1. Clone this repository
+2. In the root folder, copy and paste this command:
 ```docker-compose -f docker-compose.yml up -d --build```
 
 
