@@ -23,6 +23,8 @@
 
 
 ## Microservice Repositories ##
+
+### API Gateway
 [API Gateway](https://github.com/Dare-Share-Care/exam-gateway)  
 handles the connection between the client and each microservice. It is made using the Ocelot framework for .NET
 
