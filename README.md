@@ -95,6 +95,10 @@ handles email sending through event-driven messages sent from various microservi
 [Notification Service](https://github.com/Dare-Share-Care/exam-notification)
 We did not start development on the notification service - the idea was to send notifications to various clients and their corresponding users using web sockets.
 
+### MTOGO Client
+[Notification Service](https://github.com/Dare-Share-Care/exam-client)
+Single page application made in React + TS
+
 ## Architecture & Design
 The MTOGO Microservice Architecture (as of current development)
 ![Architecture Diagram](diagrams/architecture.png)
