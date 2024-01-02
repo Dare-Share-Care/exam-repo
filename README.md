@@ -59,7 +59,7 @@ The APIs in question:
 
 ### API Gateway
 [API Gateway](https://github.com/Dare-Share-Care/exam-gateway)  
-handles the connection between the client and each microservice and serves as a main entrypoint. It is made using the Ocelot framework for .NET Core. The routing to each microservice corresponding API is configured in the ocelot.json file. Through ocelot, it is also possible to integrate load balancing and service discovery for distributed systems, however we did not implement this function yet.
+handles the connection between the client and each microservice and serves as a main entrypoint. It is made using the Ocelot framework for .NET Core. The routing to each microservice corresponding API is configured in the ocelot.json file. Through ocelot, it is also possible to integrate load balancing and service discovery for distributed systems, however we did not implement this functionality yet.
 ![Ocelot JSON Config](images/ocelotjson.png)  
 
 ### Order Service
