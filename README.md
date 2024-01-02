@@ -55,7 +55,7 @@ We did not start development on the notification service - the idea was to send 
 The MTOGO Microservice architecture
 ![Architecture Diagram](diagrams/architecture.png)
 
-## BPMN Diagram
+## BPMN Diagram (Create Order Flow)
 ![BPMN Diagram](diagrams/create-order-bpmn.png)
 
 ## Legacy Domain Model
