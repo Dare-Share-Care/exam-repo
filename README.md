@@ -6,6 +6,7 @@
 - **Julius Krüger Madsen**: cph-jm352@cphbusiness.dk
 
 ## Architecture
+The MTOGO Microservice architecture
 ![Architecture Diagram](diagrams/architecture.png)
 
 ## BPMN Diagram
