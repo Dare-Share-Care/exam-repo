@@ -5,6 +5,30 @@
 
 - **Julius Krüger Madsen**: cph-jm352@cphbusiness.dk
 
+# Table of Contents
+
+1. Exam Repository for group Dare Share Care
+2. Setup
+3. Legacy System
+    - Monolithic Legacy System
+    - External APIs
+4. Microservice Repositories
+    - API Gateway
+    - Order Service
+    - Restaurant Service
+    - Auth Service
+    - Feedback Service
+    - Delivery Service
+    - Email Service
+    - Notification Service
+5. Architecture
+6. BPMN Diagram (Create Order Flow)
+7. Legacy Domain Model
+8. Subdomains
+9. Usecase Diagram
+10. Docker
+
+
 ## Setup
 1. Clone this repository
 2. In the root folder, copy and paste this command:
