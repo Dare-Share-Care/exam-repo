@@ -5,22 +5,6 @@
 
 - **Julius Krüger Madsen**: cph-jm352@cphbusiness.dk
 
-## Architecture
-The MTOGO Microservice architecture
-![Architecture Diagram](diagrams/architecture.png)
-
-## BPMN Diagram
-![BPMN Diagram](diagrams/create-order-bpmn.png)
-
-## Legacy Domain Model
-![Legacy Domain Model Diagram](diagrams/legacy-domain.png)
-
-## Subdomains
-![Subdomains](diagrams/MTOGO%20Subdomains.png)
-
-## Usecase Diagram
-![Usecase Diagram](diagrams/usecase.png)
-
 ## Setup
 1. Clone this repository
 2. In the root folder, copy and paste this command:
@@ -67,3 +51,18 @@ handles email sending through event-driven messages sent from various microservi
 [Notification Service](https://github.com/Dare-Share-Care/exam-notification)
 We did not start development on the notification service - the idea was to send notifications to various clients and their corresponding users using web sockets.
 
+## Architecture
+The MTOGO Microservice architecture
+![Architecture Diagram](diagrams/architecture.png)
+
+## BPMN Diagram
+![BPMN Diagram](diagrams/create-order-bpmn.png)
+
+## Legacy Domain Model
+![Legacy Domain Model Diagram](diagrams/legacy-domain.png)
+
+## Subdomains
+![Subdomains](diagrams/MTOGO%20Subdomains.png)
+
+## Usecase Diagram
+![Usecase Diagram](diagrams/usecase.png)
