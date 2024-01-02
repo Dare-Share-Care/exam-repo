@@ -23,6 +23,7 @@
     - [Delivery Service](#delivery-service)
     - [Email Service](#email-service)
     - [Notification Service](#notification-service)
+    - [MTOGO Client](#mtogo-client)
 4. [Architecture & Design](#architecture)
     - [BPMN Diagram (Create Order Flow)](#bpmn-diagram-create-order-flow)
     - [Legacy Domain Model](#legacy-domain-model)
