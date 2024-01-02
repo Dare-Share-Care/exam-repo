@@ -79,7 +79,7 @@ handles creation and storage of users. Also provides JWT based auth for the API 
 
 ### Feedback Service
 [Feedback Service](https://github.com/Dare-Share-Care/exam-feedback)
-allows users to submit reviews on their completed orders.
+allows users to submit reviews on their completed orders through GraphQL querying.
 ![Auth Service GraphQL Schema](images/Feedback.Web%20-%20GraphQL%20Schema.png)  
 
 ### Delivery Service
