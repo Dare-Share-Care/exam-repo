@@ -22,7 +22,7 @@ The MTOGO Microservice architecture
 ![Usecase Diagram](diagrams/usecase.png)
 
 ## Setup
-### ```docker-compose -f docker-compose.yml up -d --build```
+`docker-compose -f docker-compose.yml up -d --build`
 
 
 
