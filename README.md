@@ -7,12 +7,11 @@
 
 # Table of Contents
 
-1. [Exam Repository for group Dare Share Care](#exam-repository-for-group-dare-share-care)
-2. [Setup](#setup)
-3. [Legacy System](#legacy-system)
+1. [Setup](#setup)
+2. [Legacy System](#legacy-system)
     - [Monolithic Legacy System](#monolithic-legacy-system)
     - [External APIs](#external-apis)
-4. [Microservice Repositories](#microservice-repositories)
+3. [Microservice Repositories](#microservice-repositories)
     - [API Gateway](#api-gateway)
     - [Order Service](#order-service)
     - [Restaurant Service](#restaurant-service)
@@ -21,12 +20,12 @@
     - [Delivery Service](#delivery-service)
     - [Email Service](#email-service)
     - [Notification Service](#notification-service)
-5. [Architecture](#architecture)
-6. [BPMN Diagram (Create Order Flow)](#bpmn-diagram-create-order-flow)
-7. [Legacy Domain Model](#legacy-domain-model)
-8. [Subdomains](#subdomains)
-9. [Usecase Diagram](#usecase-diagram)
-10. [Docker](#docker)
+4. [Architecture](#architecture)
+    - [BPMN Diagram (Create Order Flow)](#bpmn-diagram-create-order-flow)
+    - [Legacy Domain Model](#legacy-domain-model)
+    - [Subdomains](#subdomains)
+    - [Usecase Diagram](#usecase-diagram)
+9. [Docker](#docker)
 
 
 
