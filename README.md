@@ -20,7 +20,7 @@
     - [Delivery Service](#delivery-service)
     - [Email Service](#email-service)
     - [Notification Service](#notification-service)
-4. [Architecture](#architecture)
+4. [Architecture & Design](#architecture)
     - [BPMN Diagram (Create Order Flow)](#bpmn-diagram-create-order-flow)
     - [Legacy Domain Model](#legacy-domain-model)
     - [Subdomains](#subdomains)
@@ -90,7 +90,7 @@ handles email sending through event-driven messages sent from various microservi
 [Notification Service](https://github.com/Dare-Share-Care/exam-notification)
 We did not start development on the notification service - the idea was to send notifications to various clients and their corresponding users using web sockets.
 
-## Architecture
+## Architecture & Design
 The MTOGO Microservice Architecture (as of current development)
 ![Architecture Diagram](diagrams/architecture.png)
 
