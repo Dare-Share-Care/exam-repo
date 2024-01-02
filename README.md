@@ -10,7 +10,13 @@
 2. In the root folder, copy and paste this command:
 ```docker-compose -f docker-compose.yml up -d --build```
 
+## Legacy System
 
+### Monolthic Legacy System
+[Monolithic Legacy System](https://github.com/Dare-Share-Care/exam-orders)
+Prior to the development of the MTOGO Microservice Platform, we started development of a monolithic single-codebase system with the same functionality. This is to demonstrate, the usual flow where projects start as monolithic, and as scaling requirements and other variables are in-demand, it allows for refactoring to microservice architecture
+
+### External APIs
 
 ## Microservice Repositories ##
 
