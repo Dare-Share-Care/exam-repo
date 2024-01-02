@@ -101,7 +101,7 @@ The MTOGO Microservice Architecture (as of current development)
 ## BPMN Diagram (Create Order Flow)
 ![BPMN Diagram](diagrams/create-order-bpmn.png)
 
-## Legacy Domain Model
+## Legacy System Domain Model
 ![Legacy Domain Model Diagram](diagrams/legacy-domain.png)
 
 ## Subdomains
