@@ -59,7 +59,8 @@ The APIs in question:
 
 ### API Gateway
 [API Gateway](https://github.com/Dare-Share-Care/exam-gateway)  
-handles the connection between the client and each microservice. It is made using the Ocelot framework for .NET
+handles the connection between the client and each microservice. It is made using the Ocelot framework for .NET Core. The routing to each microservice corresponding API is configured in the ocelot.json file:
+![Ocelot JSON Config](images/ocelotjson.png)  
 
 ### Order Service
 [Order Service](https://github.com/Dare-Share-Care/exam-orders)
