@@ -64,7 +64,7 @@ handles the connection between the client and each microservice and serves as a 
 
 ### Order Service
 [Order Service](https://github.com/Dare-Share-Care/exam-orders)
-handles creation and storage of orders made through the MTOGO platform. Order Service also handles the fee which each restaurant has to pay which is stored after each order created with the corresponding Restaurant ID.
+handles creation and storage of orders made through the MTOGO platform. Order Service also handles the fee which each restaurant has to pay (a percentage of every created order on the MTOGO platform)
 ![Order Service APIs](images/Orders.Web%20Swagger.png)  
 
 ### Restaurant Service
