@@ -27,7 +27,7 @@
 
 ### Order Service
 [Order Service](https://github.com/Dare-Share-Care/exam-orders)
-Order Service handles creation and storage of orders made through the MTOGO platform.
+handles creation and storage of orders made through the MTOGO platform.
 ![Order Service APIs](images/Orders.Web%20Swagger.png)  
 
 [Restaurant Service](https://github.com/Dare-Share-Care/exam-restaurant)  
