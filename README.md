@@ -8,11 +8,13 @@
 ## Architecture ##
 ![Architecture Diagram](diagrams/architecture.png)
 
-
+## BPMN Diagram ##
 ![BPMN Diagram](diagrams/create-order-bpmn.png)
 
+## Legacy Domain Model ##
 ![Legacy Domain Model Diagram](diagrams/legacy-domain.png)
 
+## Usecase Diagram ##
 ![Usecase Diagram](diagrams/usecase.png)
 
 ## Setup ##
