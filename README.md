@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 # Exam Repository for group Dare Share Care #
 
 ## Contributors:
 
+=======
+# Exam Repository - MTOGO #
+>>>>>>> 4d65cbbb976d57f234b8818743d318182f9db15f
 - **Frederik Bilgrav Andersen**: cph-fa116@cphbusiness.dk
 
 - **Janus Stivang Rasmussen**: cph-jr270@cphbusiness.dk
