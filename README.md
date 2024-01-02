@@ -81,3 +81,13 @@ The MTOGO Microservice Architecture (as of current development)
 
 ## Usecase Diagram
 ![Usecase Diagram](diagrams/usecase.png)
+
+## Docker
+These are the docker containers on the MTOGO platform.
+![Docker One](images/docker1.jpg)
+
+![Docker Two](images/docker2.png)
+
+![Docker Three](images/docker3.png)
+
+
