@@ -15,6 +15,9 @@ The MTOGO Microservice architecture
 ## Legacy Domain Model
 ![Legacy Domain Model Diagram](diagrams/legacy-domain.png)
 
+## Subdomains
+![Subdomains](diagrams/MTOGO%20Subdomains.png)
+
 ## Usecase Diagram
 ![Usecase Diagram](diagrams/usecase.png)
 
