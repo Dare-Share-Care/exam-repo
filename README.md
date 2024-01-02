@@ -1,4 +1,7 @@
 # Exam Repository for group Dare Share Care #
+
+## Contributors:
+
 - **Frederik Bilgrav Andersen**: cph-fa116@cphbusiness.dk
 
 - **Janus Stivang Rasmussen**: cph-jr270@cphbusiness.dk
