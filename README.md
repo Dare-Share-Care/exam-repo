@@ -38,6 +38,13 @@
 ```docker-compose -f docker-compose.yml up -d --build```
 
 ## Legacy System
+### Monolthic Legacy System
+[Monolithic Legacy System](https://github.com/Dare-Share-Care/exam-orders)
+
+
+Prior to the development of the MTOGO Microservice Platform, we started development of a monolithic single-codebase system with the same functionality. This is to demonstrate, the usual flow where projects start as monolithic, and as scaling requirements and other variables are in-demand, it allows for refactoring to microservice architecture.
+
+### External APIs
 Furthermore to use another existing "legacy system" we decided to take use of an external geolocation API to convert the customers address from the created order to latitude and longitude. We did this to make use of another external API on our client-side providing a map of each active delivery as courier has claimed providing real-time navigation on the MTOGO platform for our couriers.
 
 The APIs in question:
@@ -45,12 +52,6 @@ The APIs in question:
 1. [LocationIQ (Geolocation API)](https://locationiq.com/)
 
 2. [React Leaflet (React component for integrated maps)](https://react-leaflet.js.org/)
-
-### Monolthic Legacy System
-[Monolithic Legacy System](https://github.com/Dare-Share-Care/exam-orders)
-
-
-Prior to the development of the MTOGO Microservice Platform, we started development of a monolithic single-codebase system with the same functionality. This is to demonstrate, the usual flow where projects start as monolithic, and as scaling requirements and other variables are in-demand, it allows for refactoring to microservice architecture.
 
 ### External APIs
 
