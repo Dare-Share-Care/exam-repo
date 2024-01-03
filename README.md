@@ -30,6 +30,10 @@
     - [Legacy Domain Model](#legacy-domain-model)
     - [Subdomains](#subdomains)
     - [Usecase Diagram](#usecase-diagram)
+        - [C4](#c4)
+        - [C4 System Context](#c4-system-context)
+        - [C4 Containers](#c4-containers)
+        - [C4 Order Component](#c4-order-component)
 9. [Docker](#docker)
 
 
@@ -118,7 +122,18 @@ The MTOGO Microservice Architecture (as of current development)
 ## Usecase Diagram
 ![Usecase Diagram](diagrams/usecase.png)
 
-## Docker
+## C4
+
+### C4 System Context
+![C4 System Context](diagrams/c4systemcontext.png)
+
+### C4 Containers
+![C4 Containers](diagrams/c4containers.png)
+
+### C4 Order Component
+![C4 Order Component](diagrams/c4ordercomponent.png)
+
+# Docker
 These are the docker containers on the MTOGO platform. As a container orchestrator, we use docker compose. Our `docker-compose.yml` file can be found [here](docker-compose.yml):
 
 ![Docker One](images/docker1.jpg)
