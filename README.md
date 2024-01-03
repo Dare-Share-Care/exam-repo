@@ -28,7 +28,7 @@
     - [Architecture](#architecture-diagram)
     - [BPMN Diagram (Create Order Flow)](#bpmn-diagram-create-order-flow)
     - [Legacy Domain Model](#legacy-domain-model)
-    - [Subdomains](#subdomains)
+    - [MTOGO Bounded Contexts](#mtogo-bounded-contexts)
     - [Usecase Diagram](#usecase-diagram)
     - [C4](#c4)
         - [C4 System Context](#c4-system-context)
@@ -116,8 +116,8 @@ The MTOGO Microservice Architecture (as of current development)
 ## Legacy System Domain Model
 ![Legacy Domain Model Diagram](diagrams/legacy-domain.png)
 
-## Subdomains
-![Subdomains](diagrams/MTOGO%20Subdomains.png)
+## MTOGO Bounded Contexts
+![MTOGO Bounded Contexts](diagrams/MTOGO%20Subdomains.png)
 
 ## Usecase Diagram
 ![Usecase Diagram](diagrams/usecase.png)
