@@ -25,6 +25,7 @@
     - [Notification Service](#notification-service)
     - [MTOGO Client](#mtogo-client)
 4. [Architecture & Design](#architecture)
+    - [Architecture](#architecture-diagram)
     - [BPMN Diagram (Create Order Flow)](#bpmn-diagram-create-order-flow)
     - [Legacy Domain Model](#legacy-domain-model)
     - [Subdomains](#subdomains)
@@ -100,7 +101,8 @@ We did not start development on the notification service - the idea was to send 
 [React Client](https://github.com/Dare-Share-Care/exam-client)
 Single page application made in React + TS
 
-## Architecture & Design
+# Architecture & Design
+## Architecture Diagram
 The MTOGO Microservice Architecture (as of current development)
 ![Architecture Diagram](diagrams/architecture.png)
 
