@@ -117,7 +117,7 @@ The MTOGO Microservice Architecture (as of current development)
 ![Legacy Domain Model Diagram](diagrams/legacy-domain.png)
 
 ## Subdomains
-![Subdomains](diagrams/MTOGO%20Subdomains.png)
+![Subdomains](diagrams/boundedcontexts.png)
 
 ## Usecase Diagram
 ![Usecase Diagram](diagrams/usecase.png)
