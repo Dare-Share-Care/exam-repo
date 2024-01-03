@@ -55,7 +55,6 @@ The APIs in question:
 
 2. [React Leaflet (React component for integrated maps)](https://react-leaflet.js.org/)
 
-### External APIs
 
 ## Microservice Repositories ##
 
