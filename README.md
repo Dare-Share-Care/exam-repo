@@ -10,6 +10,8 @@
 
 # Table of Contents
 
+# Table of Contents
+
 1. [Setup](#setup)
 2. [Legacy System](#legacy-system)
     - [Monolithic Legacy System](#monolithic-legacy-system)
@@ -24,7 +26,9 @@
     - [Email Service](#email-service)
     - [Notification Service](#notification-service)
     - [MTOGO Client](#mtogo-client)
-4. [Architecture & Design](#architecture)
+4. [Microservice Configuration](#microservice-configuration)
+5. [Application Monitoring](#application-monitoring)
+6. [Architecture & Design](#architecture)
     - [Architecture](#architecture-diagram)
     - [BPMN Diagram (Create Order Flow)](#bpmn-diagram-create-order-flow)
     - [Legacy Domain Model](#legacy-domain-model)
@@ -34,7 +38,7 @@
         - [C4 System Context](#c4-system-context)
         - [C4 Containers](#c4-containers)
         - [C4 Order Component](#c4-order-component)
-9. [Docker](#docker)
+7. [Docker](#docker)
 
 
 
