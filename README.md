@@ -99,7 +99,7 @@ We did not start development on the notification service - the idea was to send 
 
 ### MTOGO Client
 [React Client](https://github.com/Dare-Share-Care/exam-client)
-Single page application made in React + TS
+Single page application made in React + TS (Currently not compatible with docker)
 
 # Architecture & Design
 ## Architecture Diagram
