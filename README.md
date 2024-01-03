@@ -40,7 +40,7 @@
 ```docker-compose -f docker-compose.yml up -d --build```
 
 ## Legacy System
-### Monolthic Legacy System
+### Monolithic Legacy System
 [Monolithic Legacy System](https://github.com/Dare-Share-Care/exam-legacy)
 
 
