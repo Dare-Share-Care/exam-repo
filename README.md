@@ -120,6 +120,9 @@ To monitor certain statistics such as user traffic, CPU and memory usage we took
 Prometheus is an open-source monitoring and alerting toolkit designed for collecting and querying metrics from applications and infrastructure. We use a configuration YAML file [prometheus.yml](prometheus/prometheus.yml). In this config file, we map each microservice to prometheus to expose metrics. This is achieved through a prometheus driver installed as a NuGet package in each microservice. Currently only Order Service and Restaurant Service has exposed prometheus metrics.
 ![prometheusconfig](images/prometheusconfig.png)
 
+The prometheus server also comes with a user interface to query the exposed metrics directly without another supporting dashboarding tool like Grafana.
+![prometheusquery](images/prometheusquery.png)
+
 ### Grafana
 Grafana is a dashboarding tool that can create UI dashboards to demonstrate and serve as a user interface for application monitoring. Grafana can incorporate a wide variety of data providers (such as prometheus). Data is extracted through prometheus querying. We added threshholds to the CPU usage dashboards (see yellow and red). These threshholds can be further configured to send alerts or notifications to developers to respond to sudden surge of traffic or unexpected load.
 ![grafanadashboard](images/grafanadashboard.png)
