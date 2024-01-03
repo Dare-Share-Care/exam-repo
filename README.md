@@ -51,7 +51,7 @@
 Prior to the development of the MTOGO Microservice Platform, we started development of a monolithic single-codebase system with the same functionality. This is to demonstrate, the usual flow where projects start as monolithic, and as scaling requirements and other variables are in-demand, it allows for refactoring to microservice architecture. We achieved this refactor using decoupling by domain-driven design. Here we analyzed the domain to find bounded contexts. Each bounded bountext would later serve as an independant microservice.
 
 ### External APIs
-To make use of another existing "legacy system" that could complement our application, we decided to take use of an external geolocation API to convert the customers address from the created order to latitude and longitude. We did this to make use of another external API on our client-side providing a map of each active delivery as courier has claimed providing real-time navigation on the MTOGO platform for our couriers.
+To make use of another existing "legacy system" that could complement our application, we decided to take use of an external geolocation API to convert the customers address from the created order to latitude and longitude. We did this to make use of another external API on our client-side providing a map of each active delivery a courier has claimed providing real-time navigation on the MTOGO platform for our couriers.
 
 The APIs in question:
 
