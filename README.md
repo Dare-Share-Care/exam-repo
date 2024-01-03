@@ -91,6 +91,7 @@ handles the delivery of submitted orders as well as navigation for the individua
 ### Email Service
 [Email Service](https://github.com/Dare-Share-Care/exam-emails)
 handles email sending through event-driven messages sent from various microservices. Currently as we're in the development phase, each email is caught by Mailtrap, which is an external email-testing platform.
+![Mailtrap](images/mailtrap.png)
 
 ### Notification Service
 [Notification Service](https://github.com/Dare-Share-Care/exam-notification)
