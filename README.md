@@ -109,6 +109,18 @@ Single page application made in React + TS (Currently not compatible with docker
 Each microservice project (mainly web services) has an appsettings.json. In this file we configure crucial elements such as connection strings, logging strategy, external URL / Ports for cross-microservice communication etc.
 ![appsettings.json](images/applicationjson.png)
 
+## Application Monitoring ##
+To monitor certain statistics such as user traffic, CPU and memory usage we took use of Prometheus and Grafana
+
+### Prometheus
+Prometheus is an open-source monitoring and alerting toolkit designed for collecting and querying metrics from applications and infrastructure. We use a configuration YAML file [prometheus.yml](prometheus/prometheus.yml). In this config file, we map each microservice to prometheus to expose metrics. This is achieved through a prometheus driver installed as a NuGet package in each microservice. Currently only Order Service and Restaurant Service has expoxsed prometheus metrics.
+![prometheusconfig](images/prometheusconfig.png)
+
+### Grafana
+Grafana is a dashboarding tool that can create UI dashboards to demonstrate and serve as a user interface for application monitoring. Grafana can incorporate a wide variety of data providers (such as prometheus). Data is extracted through prometheus querying.
+![grafanadashboard](images/grafanadashboard.png)
+
+
 # Architecture & Design
 ## Architecture Diagram
 The MTOGO Microservice Architecture (as of current development)
