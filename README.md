@@ -83,7 +83,7 @@ handles creation, storage and presentation of restaurant data and their correspo
 
 ### Auth Service
 [Auth Service](https://github.com/Dare-Share-Care/exam-auth)
-handles creation and storage of users. Also provides JWT based auth for the API Gateway to access role protected endpoints across our microservices
+handles creation and storage of users. Also provides JWT based auth for the API Gateway to access role protected endpoints across our microservices.
 ![Auth Service APIs](images/Auth.Web%20Swagger.png)  
 
 ### Feedback Service
