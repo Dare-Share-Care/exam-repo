@@ -105,6 +105,10 @@ We did not start development on the notification service - the idea was to send 
 [React Client](https://github.com/Dare-Share-Care/exam-client)
 Single page application made in React + TS (Currently not compatible with docker)
 
+## Microservice Configuration ##
+Each microservice project (mainly web services) has an appsettings.json. In this file we configure crucial elements such as connection strings, logging strategy, external URL / Ports for cross-microservice communication etc.
+![appsettings.json](images/applicationjson.png)
+
 # Architecture & Design
 ## Architecture Diagram
 The MTOGO Microservice Architecture (as of current development)
