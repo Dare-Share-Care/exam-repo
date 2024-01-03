@@ -140,7 +140,7 @@ The MTOGO Microservice Architecture (as of current development)
 ![Legacy Domain Model Diagram](diagrams/legacy-domain.png)
 
 ## MTOGO Bounded Contexts
-![MTOGO Bounded Contexts](diagrams/boundedcontexts.png)
+![MTOGO Bounded Contexts](diagrams/boundedcontext.png)
 
 ## Usecase Diagram
 ![Usecase Diagram](diagrams/usecase.png)
