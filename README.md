@@ -134,7 +134,7 @@ The MTOGO Microservice Architecture (as of current development)
 ![C4 Order Component](diagrams/c4ordercomponent.png)
 
 # Docker
-These are the docker containers on the MTOGO platform. As a container orchestrator, we use docker compose. Our `docker-compose.yml` file can be found [here](docker-compose.yml):
+These are the docker containers on the MTOGO platform. As a container orchestrator, we use docker compose. Our `docker-compose.yml` file can be found [here](docker-compose.yml)
 
 ![Docker One](images/docker1.jpg)
 
