@@ -30,7 +30,7 @@
     - [Legacy Domain Model](#legacy-domain-model)
     - [Subdomains](#subdomains)
     - [Usecase Diagram](#usecase-diagram)
-        - [C4](#c4)
+    - [C4](#c4)
         - [C4 System Context](#c4-system-context)
         - [C4 Containers](#c4-containers)
         - [C4 Order Component](#c4-order-component)
