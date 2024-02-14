@@ -10,8 +10,6 @@
 
 # Table of Contents
 
-# Table of Contents
-
 1. [Setup](#setup)
 2. [Legacy System](#legacy-system)
     - [Monolithic Legacy System](#monolithic-legacy-system)
